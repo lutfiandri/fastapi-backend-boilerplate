@@ -1,0 +1,7 @@
+pydantic
+pydantic-settings
+langchain
+langchain-core
+langchain-openai
+psycopg[pool,binary]
+fastapi[standard]
