@@ -1,7 +1,7 @@
 from sqlalchemy import DateTime, Integer, String
-from sqlalchemy.orm import declarative_base, mapped_column
+from sqlalchemy.orm import mapped_column
 
-Base = declarative_base()
+from app.core.db import Base
 
 
 class User(Base):

@@ -5,3 +5,4 @@ langchain-core
 langchain-openai
 psycopg[pool,binary]
 fastapi[standard]
+alembic

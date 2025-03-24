@@ -25,6 +25,14 @@ async def create_user(
     return UserResponse.model_validate(new_user)
 
 
+@router.get("/", response_model=list[UserResponse])
+async def get_many_users(
+    db_session: Session = db_session,
+) -> list[UserResponse]:
+    users = db_session.query(User).all()
+    return [UserResponse.model_validate(user) for user in users]
+
+
 @router.get("/{user_id}", response_model=UserResponse)
 async def get_user(
     user_id: int, db_session: Session = db_session
