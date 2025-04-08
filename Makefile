@@ -5,3 +5,6 @@ alembic-revision:
 
 alembic-upgrade:
 	export PYTHONPATH=$$PWD && alembic upgrade head
+
+dev:
+	export PYTHONPATH=$$PWD && fastapi dev

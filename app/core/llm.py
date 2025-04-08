@@ -1,12 +1,11 @@
-from langchain_core.language_models import BaseChatModel
-from langchain_openai import ChatOpenAI
+from langchain_google_vertexai import VertexAI
 
 from app.core.config import settings
 
 
-def create_llm() -> BaseChatModel:
+def create_llm():
     """Create a language model instance."""
-    return ChatOpenAI(
+    return VertexAI(
         model=settings.DEFAULT_MODEL,
         temperature=settings.DEFAULT_TEMPERATURE,
     )

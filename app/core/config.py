@@ -8,10 +8,12 @@ class Settings(BaseSettings):
     APP_NAME: str = "LLM API"
     DEBUG: bool = True
 
+    GOOGLE_CLOUD_STORAGE_KEY: str = "etc/secret/google-cloud-storage.json"
+    GOOGLE_CLOUD_STORATE_BUCKET: str = "sarana"
+
     # LLM Settings
-    OPENAI_API_KEY: str = ""
-    DEFAULT_MODEL: str = "gpt-4o-mini"
-    DEFAULT_TEMPERATURE: float = 0.7
+    DEFAULT_MODEL: str = "gemini-2.0-flash-001"
+    DEFAULT_TEMPERATURE: float = 0.1
 
     # DB Settings
     DB_USER: str = ""
